@@ -9,13 +9,13 @@ Tools Used: Python (Jupiter Notebook)
 
 ## Table of Contents
 
-[I. Background & Overview]()
+[I. Background & Overview](https://github.com/yuhanguyen/RFM-Analysis?tab=readme-ov-file#i-background--overview)
 
-[II. Dataset Description & Data Structure]()
+[II. Dataset Description & Data Structure](https://github.com/yuhanguyen/RFM-Analysis?tab=readme-ov-file#ii-dataset-description--data-structure)
 
-[III. Main Process]()
+[III. Main Process](https://github.com/yuhanguyen/RFM-Analysis?tab=readme-ov-file#iii-main-process)
 
-[IV. Final Conclusion & Recommendations]()
+[IV. Final Conclusion & Recommendations](https://github.com/yuhanguyen/RFM-Analysis?tab=readme-ov-file#iv-final-conclusion--recommendations)
 
 ## I. Background & Overview
 
