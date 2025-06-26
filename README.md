@@ -1,5 +1,5 @@
 # Customer loyalty analysis based on RFM model in Retail Using Python
-Used Python to analyze customer segments using RFM Model and create meaningful insights for further promotions.
+Conducted customer loyalty analysis for a retail business using the RFM model in Python; applied Numpy and Pandas for data processing on ~541k sales records, and visualized key patterns with Matplotlib and Seaborn to uncover actionable customer segments.
 
 Author: Nguyen Anh Huy
 
