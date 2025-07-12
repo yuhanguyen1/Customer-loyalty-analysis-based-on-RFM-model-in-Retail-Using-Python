@@ -19,57 +19,105 @@
 - [IV. Final Conclusion & Recommendations](#iv-final-conclusion--recommendations)
 
 ---
+## 📌 I. Background & Overview
 
-## I. 📖 Background & Overview
+### 📖 What is this project about?
 
-### 🎯 Context  
-SuperStore is a global e-commerce company with a large customer base. The Marketing Department wanted to design tailored marketing campaigns for loyal and high-value customers during the holiday season. However, with a large volume of transaction data, manual segmentation was no longer feasible.
+The **Marketing team** of a retail company aims to launch personalized customer campaigns for the holiday season, including both **retention** and **acquisition** strategies. Due to the large volume of transactional data, traditional manual segmentation is no longer viable.  
 
-The Data Analytics team was tasked with implementing a customer segmentation model using the RFM technique, allowing scalable and strategic customer insights for campaign execution.
+To address this, the **RFM model** is implemented using Python to analyze purchasing behavior and segment customers based on **Recency**, **Frequency**, and **Monetary** metrics.  
 
-### 🔍 What is the RFM Model?  
-The **RFM model** is a behavioral segmentation method that scores customers based on:
+This project covers the entire analytical flow:  
+✔️ Data cleaning & preparation  
+✔️ RFM score computation  
+✔️ Customer segmentation  
+✔️ Visualization  
+✔️ Business recommendations  
 
-- **Recency**: How recently a customer made a purchase.  
-- **Frequency**: How often the customer made a purchase.  
-- **Monetary**: How much the customer spent.
+### 👤 Who is this project for?
 
-These scores are then used to cluster customers into distinct groups for targeted marketing.
-
-### ✅ Objectives  
-✔️ Segment customers based on RFM scores to enable data-driven marketing strategies.  
-✔️ Identify which RFM metric is most impactful in retail segmentation.  
-
-👤 **Who is this project for?**  
-- Data Analysts & Business Analysts  
-- Marketing Directors & Stakeholders  
-- E-commerce Managers
+✔️ Marketing & Sales Department  
+✔️ Business stakeholders & decision-makers  
 
 ---
 
-## II. 📂 Dataset Description & Data Structure
+### ❓ Business Questions
 
-This is a transnational dataset containing all transactions from 01/12/2010 to 09/12/2011 for a UK-based online retail store.
+- How can we segment our customers effectively using the RFM framework?  
+- Which segments should be prioritized for retention or promotion campaigns?  
+- What customer insights can be extracted to enhance marketing performance?  
+- What strategies should be applied to different customer tiers to maximize lifetime value?
 
-**File**: `ecommerce_retail.xlsx`
+---
+
+### 📊 Why use the RFM Model?
+
+**RFM (Recency, Frequency, Monetary)** is a proven method to understand customer purchasing behavior:
+
+- **Recency**: How recently did the customer make a purchase?  
+- **Frequency**: How often do they purchase?  
+- **Monetary**: How much have they spent?
+
+By applying RFM analysis, companies can:
+- Identify loyal, at-risk, and high-value customers
+- Tailor communication strategies for each segment
+- Optimize promotional spending and campaign effectiveness
+
+---
+
+## 📂 II. Dataset Description & Data Structure
+
+### 📌 Data Source
+
+- **Source**: Internal e-commerce retail dataset  
+- **Format**: Excel workbook (`.xlsx`)  
+- **Size**: 541,910 rows × 8 columns across 2 sheets  
+
+---
+
+### 📁 Data Structure & Relationships
+
+#### 1️⃣ Tables Used
+
+- **Sheet 1: E-commerce Retail** – Transaction-level data (orders, quantities, timestamps, customer IDs, pricing).  
+- **Sheet 2: Segmentation** – RFM scores and segmentation results per customer.
+
+---
 
 <details>
-<summary>📄 Dataset Schema</summary>
+<summary>📋 <strong>Dataset Schema: Sheet 1 - E-commerce Retail</strong></summary>
 
-| Column       | Data Type | Description                                                                 |
-|--------------|-----------|-----------------------------------------------------------------------------|
-| InvoiceNo    | Object    | Unique invoice number. ‘C’ indicates a cancelled order.                    |
-| StockCode    | Object    | Unique product code.                                                        |
-| Description  | Object    | Product name.                                                               |
-| Quantity     | Integer   | Number of products bought.                                                  |
-| InvoiceDate  | Datetime  | Date and time of transaction.                                               |
-| UnitPrice    | Float     | Price per product unit.                                                     |
-| CustomerID   | Float     | Unique customer ID.                                                         |
-| Country      | Object    | Customer’s country of origin.                                               |
+| Column       | Data Type | Description |
+|--------------|------------|-------------|
+| InvoiceNo    | OBJECT     | Invoice number (starts with 'C' if canceled) |
+| StockCode    | OBJECT     | Product/item code |
+| Description  | OBJECT     | Product name |
+| Quantity     | INTEGER    | Quantity of product purchased |
+| InvoiceDate  | DATETIME   | Date and time of transaction |
+| UnitPrice    | FLOAT      | Price per unit |
+| CustomerID   | FLOAT      | Unique customer identifier |
+| Country      | OBJECT     | Customer’s country |
+
+</details>
+
+<details>
+<summary>📊 <strong>RFM Segmentation Mapping: Sheet 2 - Segmentation</strong></summary>
+
+This sheet includes pre-computed or output RFM scores and assigned segments.
+
+| Column      | Description |
+|-------------|-------------|
+| CustomerID  | Unique customer identifier |
+| Recency     | Days since last purchase |
+| Frequency   | Number of purchases |
+| Monetary    | Total money spent |
+| RFM_Score   | Combined RFM score |
+| Segment     | Assigned segment (e.g., Champions, At Risk, Hibernating) |
 
 </details>
 
 ---
+
 
 ## III. ⚒️ Main Process
 
