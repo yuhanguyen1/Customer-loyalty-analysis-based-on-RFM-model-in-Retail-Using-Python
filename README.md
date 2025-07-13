@@ -288,13 +288,120 @@ RFM_df_final.head()
 
 ---
 
+### 📍 Part 1: Segment-level Insights for Campaign Strategy
+
+This section provides visualizations to answer key business questions such as:
+
+- **Which customer segments should be prioritized for retention or promotion campaigns?**
+- **What customer insights can be extracted to enhance marketing performance?**
+- **What strategies should be applied to different customer tiers to maximize lifetime value?**
+
+---
+
+#### 1️⃣ Number of Customers per Segment
+
+<img width="846" height="509" alt="image" src="https://github.com/user-attachments/assets/2867d559-1ae3-4752-a76c-b679c820ff50" />
+
+---
+
+#### 2️⃣ Total Revenue by Segment
+
+<img width="847" height="424" alt="image" src="https://github.com/user-attachments/assets/4d60d5c5-c9c5-4718-8c2f-5bb4bf6502c9" />
+
+---
+
+#### 3️⃣ Average Recency / Frequency / Monetary by Segment
+
+<img width="850" height="479" alt="image" src="https://github.com/user-attachments/assets/b446a6d6-790f-4ef5-ae53-5e216091c40a" />
+
+---
+
+#### 4️⃣ Segments over Time (Cohort by Start Month)
+
+<img width="843" height="446" alt="image" src="https://github.com/user-attachments/assets/4de2dded-0cb3-4d00-bb11-191fa9b847b2" />
+
+---
+
+## 📊 Key Findings
+
+Based on the segment-level analysis of Recency (R), Frequency (F), and Monetary (M), we can draw key behavioral insights for each of the 11 customer segments as follows:
+
+| Segment               | R (Recency)         | F (Frequency)           | M (Monetary)            | Behavioral Insights |
+|-----------------------|---------------------|--------------------------|--------------------------|---------------------|
+| **Champions (17%)**          | Very recent (~10–20 days)  | Extremely frequent (~200+ purchases) | Highest (~27% of total revenue) | Top-performing customers who purchase often and recently. They are vital to the business and should be consistently rewarded and retained. |
+| **Loyal (9%)**              | Moderately recent (~60 days) | High frequency (~180 purchases)     | Considerable (~13% of revenue) | Reliable customers with stable buying habits. Sustained engagement and appreciation programs are recommended. |
+| **Potential Loyalist (12%)**| Moderate (~50 days)         | Moderate (~100 purchases)          | Moderate (~7% of revenue)       | Customers with promising engagement. Targeted incentives may convert them into loyal buyers. |
+| **New Customers (8%)**      | Moderately recent (~40 days) | Low frequency (~50 purchases)      | Low (~3% of revenue)            | Newly acquired users showing early signs of interest. Retention efforts such as welcome flows and personalized offers are needed. |
+| **Promising (4%)**          | Moderate (~60–70 days)       | Moderate (~50–80 purchases)        | Low (~4% of revenue)            | These customers may return but show weak commitment. Follow-up campaigns and nudges may increase loyalty. |
+| **Need Attention (6%)**     | High (~120+ days)            | Low to moderate (~50 purchases)    | Low (~3–4% of revenue)          | Previously engaged customers whose activity is declining. Risk of defection to competitors — should be reactivated. |
+| **At Risk (11%)**           | High (~120 days)             | Moderate (~100 purchases)          | High (~10–14% of revenue)       | Former high-value customers who are disengaging. Immediate win-back strategies are required. |
+| **About to Sleep (4%)**     | High (~100 days)             | Low (~30 purchases)                | Low (~3% of revenue)            | Customers on the verge of churn. Re-engagement is urgent before they become inactive. |
+| **Cannot Lose Them (3%)**   | Very high (~180+ days)       | Moderate (~100 purchases)          | Moderate (~4–5% of revenue)     | Past big spenders now inactive. High-priority group for targeted retention offers. |
+| **Hibernating (18%)**       | Very high (~200 days)        | Very low (~10–20 purchases)        | Very low (~2% of revenue)       | Dormant customers who have not engaged for a long time. Consider reactivation or list pruning. |
+| **Lost Customers (9%)**     | Extremely high (220+ days)   | Extremely low (~5–10 purchases)    | Very low (~1–2% of revenue)     | Nearly lapsed customers with minimal purchase history. Only strong and tailored outreach may bring them back. |
+
+> 🔍 These insights provide a strategic foundation for tailored marketing initiatives — focusing on retention for high-value customers (e.g., Champions, At Risk) and nurturing potential segments (e.g., Potential Loyalists, Promising).
+
+---
+
+### 📍 Part 2: Identify Most Influential RFM Metric
+
+To determine which RFM metric (Recency, Frequency, or Monetary) is most strongly tied to customer value (Monetary), we use the following visualizations:
+
+---
+
+#### 1️⃣ Correlation Heatmap
+
+<img width="573" height="398" alt="image" src="https://github.com/user-attachments/assets/04171e86-fb0c-4f64-9677-c9e7b0d7b593" />
+
+---
+
+#### 2️⃣ Boxplots of Monetary vs. R/F/M Scores
+
+<img width="1765" height="486" alt="image" src="https://github.com/user-attachments/assets/f485ea5d-47a5-4001-aba7-17e087928315" />
+
+---
+
+## 📊 Key Findings
+
+| Analysis Type             | Key Observations                                                                                                                                                                                                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 🔺 **Correlation Matrix** | - Moderate positive correlation between Frequency and Monetary (0.43) → suggests that frequent buyers tend to spend more. <br> - Recency has weak negative correlation with both Frequency and Monetary, meaning more recent customers are not necessarily frequent or high-spending.                        |
+| 📦 **Boxplots**           | - Customers with high **Monetary** and **Frequency** scores show strong alignment with high actual spending. <br> - **Monetary score** shows clearest separation between spend levels, followed by Frequency. <br> - Recency score has weaker variation in spending, with overlapping medians across scores. |
+
+
+---
+
 ## IV. 🧠 Final Conclusion & Recommendations
 
-### 📝 Insights
+### 🧭 Customer Grouping & Marketing Strategies
 
+Based on RFM segments, we consolidate the 11 customer types into 4 strategic customer groups. Each group represents a different level of customer engagement and value. Below are the suggested marketing strategies tailored to each:
 
-### 📌 Recommendations
+| Group                     | Included Segments                                                                 | Characteristics                                                                                           | Marketing Strategy                                                                                      |
+|---------------------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| **1. High-Value & Engaged**     | Champions, Loyal                                                                 | Recently active, purchase frequently, and contribute the most to revenue.                                 | ✅ Exclusive loyalty programs<br>✅ Early access to promotions<br>✅ Personalized offers & appreciation campaigns |
+| **2. Growth Opportunities**     | Potential Loyalist, New Customers, Promising                                     | Medium to recent activity, not yet loyal but show potential to convert.                                   | 📈 Targeted email nurture sequences<br>📈 Welcome offers or onboarding journeys<br>📈 Encourage repeat purchases |
+| **3. At Risk / Churning**       | At Risk, Need Attention, About to Sleep, Cannot Lose Them                        | Previously active but showing signs of disengagement.                                                     | ⚠️ Win-back campaigns (discounts, reminders)<br>⚠️ Re-engagement surveys<br>⚠️ Urgency-based promotions |
+| **4. Inactive / Low-Value**     | Hibernating, Lost Customers                                                      | Very little activity or purchases long ago. Low contribution to revenue.                                  | 💤 Periodic reactivation campaigns<br>💤 Sunset or deprioritize in marketing efforts<br>💤 Test reactivation with limited offers |
 
+> 🎯 By focusing efforts on the **High-Value & Engaged** and **Growth Opportunities** groups, while running targeted reactivation for **At Risk**, businesses can maximize customer lifetime value and marketing ROI.
+
+---
+
+### 📌 RFM Component Importance
+| RFM Component | Priority Level | Justification                                                                                                                                                               |
+| ------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Monetary**  | ⭐️⭐️⭐️ High    | Strongest separation in actual customer value (from boxplots) and moderate correlation with Frequency. Excellent indicator of a customer’s long-term value.                 |
+| **Frequency** | ⭐️⭐️ Medium    | Positively correlated with Monetary and shows decent stratification. Frequent buyers are likely to bring sustained revenue.                                                 |
+| **Recency**   | ⭐️ Low         | Weakest correlation and inconsistent monetary patterns. May not be a strong standalone predictor in this dataset but still relevant in specific churn detection strategies. |
+
+#### ✅ Strategic Takeaways
++ Prioritize **Monetary** score when defining valuable customer segments for high-ROI campaigns.
+
++ Use **Frequency** score to identify loyal and consistent buyers for retention initiatives.
+
++ Treat **Recency** as a supporting metric in churn-prevention strategies rather than a lead indicator for top-value segmentation.
 
 ---
 
