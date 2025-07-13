@@ -10,13 +10,13 @@
 ---
 
 ## 📚 Table of Contents  
-- [I. Background & Overview](#i-background--overview)  
-- [II. Dataset Description & Data Structure](#ii-dataset-description--data-structure)  
-- [III. Main Process](#iii-main-process)  
+- [📌 I. Background & Overview](#i-background--overview)  
+- [📂 II. Dataset Description & Data Structure](#ii-dataset-description--data-structure)  
+- [⚒️ III. Main Process](#iii-main-process)  
   - [EDA (Exploratory Data Analysis)](#eda-exploratory-data-analysis)  
   - [Data Processing & RFM Calculation](#data-processing--rfm-calculation)  
   - [Visualization & Customer Segmentation](#visualization--customer-segmentation)  
-- [IV. Final Conclusion & Recommendations](#iv-final-conclusion--recommendations)
+- [🧠 IV. Final Conclusion & Recommendations](#iv-final-conclusion--recommendations)
 
 ---
 ## 📌 I. Background & Overview
