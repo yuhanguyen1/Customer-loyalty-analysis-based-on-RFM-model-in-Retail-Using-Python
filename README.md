@@ -119,7 +119,7 @@ This sheet includes pre-computed or output RFM scores and assigned segments.
 ---
 
 
-## III. ⚒️ Main Process
+## ⚒️ III. Main Process
 
 This section outlines the full analytical flow from data exploration to RFM modeling and customer segmentation.
 
@@ -372,7 +372,7 @@ To determine which RFM metric (Recency, Frequency, or Monetary) is most strongly
 
 ---
 
-## IV. 🧠 Final Conclusion & Recommendations
+## 🧠 IV. Final Conclusion & Recommendations
 
 ### 🧭 Customer Grouping & Marketing Strategies
 
