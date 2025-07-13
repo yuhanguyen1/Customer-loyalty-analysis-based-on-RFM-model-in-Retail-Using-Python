@@ -189,7 +189,7 @@ ecommerce_retail.isnull().sum()
 ```
 <img width="218" height="334" alt="image" src="https://github.com/user-attachments/assets/66bae630-eead-422b-acb1-f72ae60b08a4" />
 
-####4️⃣ Remove Duplicate Records
+#### 4️⃣ Remove Duplicate Records
 We check for duplicates based on invoice, product, date, and customer:
 ```python
 df_duplication = ecommerce_retail.duplicated(subset=["InvoiceNo", "StockCode", "InvoiceDate", "CustomerID"])
