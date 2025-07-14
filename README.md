@@ -10,13 +10,13 @@
 ---
 
 ## 📚 Table of Contents  
-- [📌 I. Background & Overview](#i-background--overview)  
-- [📂 II. Dataset Description & Data Structure](#ii-dataset-description--data-structure)  
-- [⚒️ III. Main Process](#iii-main-process)  
-  - [EDA (Exploratory Data Analysis)](#eda-exploratory-data-analysis)  
-  - [Data Processing & RFM Calculation](#data-processing--rfm-calculation)  
-  - [Visualization & Customer Segmentation](#visualization--customer-segmentation)  
-- [🧠 IV. Final Conclusion & Recommendations](#iv-final-conclusion--recommendations)
+- [📌 I. Background & Overview](https://github.com/yuhanguyen1/Customer-loyalty-analysis-based-on-RFM-model-in-Retail-Using-Python?tab=readme-ov-file#-i-background--overview)  
+- [📂 II. Dataset Description & Data Structure](https://github.com/yuhanguyen1/Customer-loyalty-analysis-based-on-RFM-model-in-Retail-Using-Python?tab=readme-ov-file#-ii-dataset-description--data-structure)  
+- [⚒️ III. Main Process](https://github.com/yuhanguyen1/Customer-loyalty-analysis-based-on-RFM-model-in-Retail-Using-Python?tab=readme-ov-file#%EF%B8%8F-iii-main-process)  
+  - [EDA (Exploratory Data Analysis)](https://github.com/yuhanguyen1/Customer-loyalty-analysis-based-on-RFM-model-in-Retail-Using-Python?tab=readme-ov-file#-eda-exploratory-data-analysis)
+  - [Data Processing & RFM Calculation](https://github.com/yuhanguyen1/Customer-loyalty-analysis-based-on-RFM-model-in-Retail-Using-Python?tab=readme-ov-file#-data-processing--rfm-calculation)  
+  - [Visualization & Customer Segmentation](https://github.com/yuhanguyen1/Customer-loyalty-analysis-based-on-RFM-model-in-Retail-Using-Python?tab=readme-ov-file#-visualization--customer-segmentation)  
+- [🧠 IV. Final Conclusion & Recommendations](https://github.com/yuhanguyen1/Customer-loyalty-analysis-based-on-RFM-model-in-Retail-Using-Python?tab=readme-ov-file#-iv-final-conclusion--recommendations)
 
 ---
 ## 📌 I. Background & Overview
