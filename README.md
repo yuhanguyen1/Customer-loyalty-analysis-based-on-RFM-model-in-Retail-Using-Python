@@ -208,18 +208,46 @@ ecommerce_retail.shape
 
 ---
 
-### 🧮 Data Processing & RFM Calculation
+### 📊 Data Processing & RFM Calculation  
 
-📌 **Goal**: Calculate RFM scores and segment customers
+**🎯 Goal**: Calculate RFM scores and segment customers based on purchasing behavior.  
 
-#### ✅ Steps
-1. **Define Reference Date**: Set as one day after the latest transaction.
-2. **Calculate RFM Metrics**:
-   - `Recency`: Days since last purchase.
-   - `Frequency`: Total number of transactions.
-   - `Monetary`: Total spending.
-3. **Score Each RFM Metric**: Rank each customer (e.g., score 1–5).
-4. **Create RFM Segments**: Combine R, F, M scores for final segmentation.
+#### ✅ Steps  
+
+1. **Define Reference Date**  
+   - Set the reference date as **one day after the latest transaction** in the dataset.  
+   - This ensures accurate calculation of days since the last purchase (Recency).  
+
+2. **Calculate RFM Metrics**  
+   - **Recency (R):** Number of days since the customer’s last purchase.  
+   - **Frequency (F):** Total number of transactions made by the customer.  
+   - **Monetary (M):** Total amount of money spent by the customer.  
+
+3. **Score Each RFM Metric (1–5)**  
+   - Each customer is ranked into **five groups (quintiles)** for each metric.  
+   - Each RFM metric is divided into **five groups (quintiles)** to ensure a balanced distribution of customers across the scoring scale.  
+   - Using 5 levels provides enough granularity to distinguish meaningful differences in customer behavior, while keeping the segmentation simple and interpretable.  
+   - A score of **1** always represents the least desirable behavior (e.g., very inactive, very low frequency/spending), while **5** represents the most desirable (e.g., very recent purchase, very frequent, high spender).  
+
+
+   #### Meaning of Scores:  
+
+   | Metric      | Score = 1 (Lowest)                         | Score = 5 (Highest)                     |
+   |-------------|--------------------------------------------|------------------------------------------|
+   | **Recency** | Purchased a long time ago (inactive)       | Purchased very recently (highly engaged) |
+   | **Frequency** | Very few purchases, low engagement        | Many purchases, very frequent buyer      |
+   | **Monetary** | Very low total spending                   | High total spending, valuable customer   |
+
+   👉 In summary: **1 = least valuable behavior, 5 = most valuable behavior**.  
+
+4. **Create RFM Segments**  
+   - Combine R, F, and M scores into a **segment code** (e.g., R=5, F=4, M=5 → "545").  
+   - These codes are then mapped into intuitive customer groups, such as:  
+     - **Champions (555, 554, …):** Recent, frequent, and high-spending customers.  
+     - **Potential Loyalists:** Recent buyers with growing frequency and spending.  
+     - **At Risk:** Previously valuable but haven’t purchased for a long time.  
+     - **Hibernating:** Inactive customers with low frequency and low spending.  
+
 
 #### 1️⃣ Define Reference Date & Calculate RFM Metrics
 ```python
